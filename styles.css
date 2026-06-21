@@ -1,0 +1,126 @@
+html {
+  font-size: 200%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+
+:root {
+  --teal: #00b2b2;
+  --brown: #ba6a34;
+  --bluegray: #5c7c89;
+  --dark: #003333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Aladin', Arial, cursive;
+  background: var(--dark);
+  color: white;
+}
+
+/* HEADER LAYOUT */
+header {
+  border-bottom: 3px solid var(--teal);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+}
+
+/* LEFT + RIGHT IMAGES (logo + seal) */
+.sideimg {
+  width: 120px;
+  height: auto;
+}
+
+/* CENTER BANNER */
+.banner {
+  max-height: 160px;
+  width: auto;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+nav a {
+  background: var(--brown);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: var(--teal);
+}
+
+nav a.active {
+  background: var(--teal);
+  color: var(--dark);
+  font-weight: bold;
+}
+
+/* PAGE CONTENT */
+.container {
+  max-width: 900px;
+  margin: 60px auto 0 auto;
+  padding: 20px;
+}
+
+/* CONTENT BOXES */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-left: 4px solid var(--teal);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+/* FORMS */
+input, button {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  background: var(--teal);
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.container a {
+  color: var(--teal);
+}
+
+.container a:hover {
+  color: var(--brown);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font-size: 22px;
+  padding: 14px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+label {
+  font-size: 26px;
+}

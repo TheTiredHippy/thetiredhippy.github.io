@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <title>Email Signup</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <img src="../banner.png" class="banner">
+</header>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../FindMeAtTheseEvents/">Live Events</a>
+  <a href="../NewsAndSales/">News, Drops & Sales</a>
+  <a href="../EmailListSignup/" class="active">Email List Signup</a>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+
+    <h2>Join The Email List</h2>
+    <p>Get updates on Drops, Events, and Sales.</p>
+
+    <form id="signup-form"
+          action="https://script.google.com/macros/s/AKfycbze3xD0xzSEBMKct4XJ6_CKUEK4AqxuhUtzKgEDxBs36CtFA2oEYLS4MdWdKDhnwLhydA/exec"
+          method="POST"
+          target="hidden_iframe">
+
+      <input type="text" name="name" placeholder="Preferred Name" required>
+      <br>
+
+      <input type="email" name="email" placeholder="Email" required>
+      <br>
+
+      <input type="text" name="city" placeholder="City (optional)">
+      <br><br>
+
+      <button type="submit">Submit!</button>
+
+    </form>
+
+    <p id="success" style="display:none; color:green; font-weight:bold;">
+      Thanks! You’re on the list.
+    </p>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  </div>
+
+</div>
+
+<script>
+  const form = document.getElementById("signup-form");
+  const success = document.getElementById("success");
+
+  form.addEventListener("submit", function () {
+    setTimeout(() => {
+      success.style.display = "block";
+      form.reset();
+    }, 300);
+  });
+</script>
+
+</body>
+</html>
