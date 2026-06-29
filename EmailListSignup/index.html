@@ -2,9 +2,12 @@
 <html>
 <head>
   <title>The Tired Hippy Co - Email Signup</title>
+
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body>
@@ -41,6 +44,12 @@
 
       <input type="text" name="city" placeholder="City (optional)">
       <br><br>
+
+      <input type="text" name="website" style="display:none">
+
+      <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div>
+
+      <br>
 
       <button type="submit">Submit!</button>
 
