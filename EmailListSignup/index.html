@@ -47,7 +47,12 @@
 
       <input type="text" name="website" style="display:none">
 
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAADsuQY3VG_ue1BWc"></div>
+      <!-- TURNSTILE -->
+      <div class="cf-turnstile"
+           data-sitekey="0x4AAAAAADsuQY3VG_ue1BWc"
+           data-callback="onTurnstileSuccess"></div>
+
+      <input type="hidden" name="cf-turnstile-response" id="turnstile-token">
 
       <br>
 
@@ -62,6 +67,10 @@
 </div>
 
 <script>
+  function onTurnstileSuccess(token) {
+    document.getElementById("turnstile-token").value = token;
+  }
+
   const form = document.getElementById("signup-form");
   const status = document.getElementById("status");
 
@@ -80,13 +89,15 @@
         body: formData
       });
 
-      if (res.ok) {
+      const text = await res.text();
+
+      if (res.ok && text.includes("OK")) {
         status.style.color = "green";
         status.textContent = "Thanks! You’re on the list.";
         form.reset();
       } else {
         status.style.color = "red";
-        status.textContent = "Something went wrong. Try again.";
+        status.textContent = text;
       }
 
     } catch (err) {
