@@ -6,8 +6,6 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
-
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body>
@@ -47,15 +45,6 @@
 
       <input type="text" name="website" style="display:none">
 
-      <!-- TURNSTILE -->
-      <div class="cf-turnstile"
-           data-sitekey="0x4AAAAAADsuQY3VG_ue1BWc"
-           data-callback="onTurnstileSuccess"></div>
-
-      <input type="hidden" name="cf-turnstile-response" id="turnstile-token">
-
-      <br>
-
       <button type="submit">Submit!</button>
 
     </form>
@@ -67,10 +56,6 @@
 </div>
 
 <script>
-  function onTurnstileSuccess(token) {
-    document.getElementById("turnstile-token").value = token;
-  }
-
   const form = document.getElementById("signup-form");
   const status = document.getElementById("status");
 
@@ -89,15 +74,13 @@
         body: formData
       });
 
-      const text = await res.text();
-
-      if (res.ok && text.includes("OK")) {
+      if (res.ok) {
         status.style.color = "green";
         status.textContent = "Thanks! You’re on the list.";
         form.reset();
       } else {
         status.style.color = "red";
-        status.textContent = text;
+        status.textContent = "Something went wrong. Try again.";
       }
 
     } catch (err) {
