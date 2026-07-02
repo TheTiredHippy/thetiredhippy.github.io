@@ -18,15 +18,7 @@ body {
   color: white;
 }
 
-/* remove default heading margins that were leaking into layout */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER LAYOUT */
 header {
   border-bottom: 3px solid var(--teal);
 }
@@ -38,15 +30,13 @@ header {
   padding: 15px 40px;
 }
 
+/* CENTER BANNER */
 .banner {
   max-height: 160px;
   width: auto;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-
+/* NAVIGATION */
 nav {
   display: flex;
   justify-content: center;
@@ -72,14 +62,35 @@ nav a.active {
   font-weight: bold;
 }
 
-/* =========================
-   PAGE LAYOUT
-========================= */
-
+/* PAGE CONTENT */
 .container {
   max-width: 900px;
   margin: 60px auto 0 auto;
   padding: 20px;
+}
+
+/* CONTENT BOXES */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-left: 4px solid var(--teal);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+/* FORMS */
+input, button {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 22px;
+  padding: 14px;
+}
+
+button {
+  background: var(--teal);
+  border: none;
+  color: black;
+  cursor: pointer;
 }
 
 .container a {
@@ -90,10 +101,21 @@ nav a.active {
   color: var(--brown);
 }
 
-/* =========================
-   LINK CARDS (FIXED CLEAN VERSION)
-========================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+label {
+  font-size: 26px;
+}
+
+/* LINK CARDS */
 .link-card {
   background: rgba(255,255,255,0.05);
   border-left: 4px solid var(--brown);
@@ -115,20 +137,15 @@ nav a.active {
   color: white;
 }
 
-/* text column */
 .link-text {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-/* replaces old h2 styling cleanly */
-.link-card .title {
+.link-card h2 {
   margin: 0;
   color: var(--teal);
-  font-weight: 700;
-  font-size: 1.1em;
-  line-height: 1.2;
 }
 
 .link-card p {
@@ -136,7 +153,6 @@ nav a.active {
   opacity: 0.85;
 }
 
-/* icon */
 .link-icon {
   width: 100px;
   height: 100px;
@@ -144,46 +160,7 @@ nav a.active {
   flex-shrink: 0;
 }
 
-/* =========================
-   FORMS
-========================= */
-
-input, button {
-  padding: 10px;
-  margin-top: 10px;
-  font-size: 22px;
-  padding: 14px;
-}
-
-button {
-  background: var(--teal);
-  border: none;
-  color: black;
-  cursor: pointer;
-}
-
-input[type="checkbox"] {
-  transform: scale(1.5);
-  margin-right: 10px;
-}
-
-label {
-  font-size: 26px;
-}
-
-/* =========================
-   IMAGES
-========================= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* =========================
-   FOOTER (CLEAN SINGLE VERSION)
-========================= */
-
+/* FOOTER */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -217,10 +194,7 @@ img {
   color: var(--dark);
 }
 
-/* =========================
-   ACCESSIBILITY ONLY
-========================= */
-
+/* ACCESSIBILITY */
 .sr-only {
   position: absolute !important;
   width: 1px !important;
