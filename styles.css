@@ -144,8 +144,8 @@ label {
   color: white;
 }
 
-.link-card h2 {
-  margin-top: 0;
+.link-card .title {
+  margin: 0;
   color: var(--teal);
 }
 
