@@ -253,3 +253,16 @@ label {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: nowrap;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  nav a {
+    font-size: 0.75rem;
+    padding: 8px 10px;
+  }
+}
