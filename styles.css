@@ -256,13 +256,16 @@ label {
 
 @media (max-width: 768px) {
   nav {
-    flex-wrap: nowrap;
-    gap: 6px;
-    padding: 8px;
+    gap: 4px;
+    padding: 6px;
   }
 
   nav a {
-    font-size: 0.75rem;
     padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .banner {
+    max-height: 120px;
   }
 }
