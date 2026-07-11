@@ -253,3 +253,49 @@ label {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 150%;
+  }
+
+  .banner {
+    max-height: 110px;
+  }
+
+  nav {
+    gap: 4px;
+    padding: 6px;
+  }
+
+  nav a {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+
+  .container {
+    margin-top: 30px;
+    padding: 15px;
+  }
+
+  .link-card a {
+    padding: 15px;
+  }
+
+  .link-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+}
