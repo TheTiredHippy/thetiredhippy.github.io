@@ -93,11 +93,15 @@ input, button {
   margin-top: 10px;
 }
 
-button {
-  background: var(--teal);
+.signup-button {
+  background: var(--brown);
   border: none;
-  color: black;
+  color: white;
   cursor: pointer;
+}
+
+.signup-button:hover {
+  background: var(--bluegray);
 }
 
 .container a {
