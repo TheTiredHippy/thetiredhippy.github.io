@@ -88,8 +88,10 @@ nav a.active {
   color: var(--teal);
 }
 /* FORMS */
-input, button {
-  padding: 10px;
+input,
+button {
+  font-size: 22px;
+  padding: 14px;
   margin-top: 10px;
 }
 
@@ -115,12 +117,6 @@ input, button {
 img {
   max-width: 100%;
   height: auto;
-}
-
-input,
-button {
-  font-size: 22px;
-  padding: 14px;
 }
 
 input[type="checkbox"] {
