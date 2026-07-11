@@ -84,6 +84,9 @@ nav a.active {
   border-radius: 10px;
 }
 
+.card h2 {
+  color: var(--teal);
+}
 /* FORMS */
 input, button {
   padding: 10px;
