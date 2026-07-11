@@ -101,11 +101,11 @@ button {
 }
 
 .container a {
-  color: var(--teal);
+  color: var(--brown);
 }
 
 .container a:hover {
-  color: var(--brown);
+  color: var(--bluegrey);
 }
 
 img {
