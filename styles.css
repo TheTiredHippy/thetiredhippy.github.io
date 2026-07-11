@@ -160,13 +160,6 @@ label {
   margin-bottom: 0;
 }
 
-.link-card {
-  background: rgba(255,255,255,0.05);
-  border-left: 4px solid var(--brown);
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
 .link-card a {
   display: flex;
   align-items: center;
