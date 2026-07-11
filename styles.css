@@ -253,19 +253,3 @@ label {
   white-space: nowrap !important;
   border: 0 !important;
 }
-
-@media (max-width: 768px) {
-  nav {
-    gap: 4px;
-    padding: 6px;
-  }
-
-  nav a {
-    padding: 8px 10px;
-    font-size: 0.8rem;
-  }
-
-  .banner {
-    max-height: 120px;
-  }
-}
