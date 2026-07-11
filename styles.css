@@ -144,10 +144,6 @@ label {
   transform: translateY(-2px);
 }
 
-.link-card p {
-  margin-bottom: 0;
-}
-
 .link-card a {
   display: flex;
   align-items: center;
@@ -180,14 +176,6 @@ label {
   flex-shrink: 0;
 }
 
-.footer {
-  text-align: center;
-  padding: 40px 10px;
-  margin-top: 60px;
-  opacity: 0.7;
-  font-size: 18px;
-}
-
 .footer a {
   color: var(--teal);
   text-decoration: none;
@@ -206,6 +194,7 @@ label {
   border-top: 2px solid var(--teal);
   font-size: 26px;
   opacity: 0.8;
+  text-align: center;
 }
 
 .footer-left p {
