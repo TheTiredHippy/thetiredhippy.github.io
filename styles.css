@@ -144,13 +144,6 @@ label {
   transform: translateY(-2px);
 }
 
-.link-card a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: white;
-}
-
 .link-card h2 {
   margin-top: 0;
   color: var(--teal);
