@@ -105,7 +105,7 @@ button {
 }
 
 .container a:hover {
-  color: var(--bluegrey);
+  color: var(--bluegray);
 }
 
 img {
