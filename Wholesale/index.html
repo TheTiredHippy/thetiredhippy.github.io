@@ -1,136 +1,197 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-  <title>Wholesale | The Tired Hippy Co</title>
+  <title>The Tired Hippy Co - Wholesale</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wholesale information for The Tired Hippy Co.">
+  <meta name="description" content="Wholesale inquiries for The Tired Hippy Co handmade products.">
   <link rel="canonical" href="https://thetiredhippy.com/Wholesale/">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<h1 class="sr-only">Wholesale – The Tired Hippy Co</h1>
+<h1 class="sr-only">Wholesale - The Tired Hippy Co</h1>
 
 <header class="topbar">
   <a href="/">
-    <img src="/banner.png" class="banner" alt="The Tired Hippy Co">
+    <img src="../banner.png" class="banner" alt="The Tired Hippy Co">
   </a>
 </header>
 
 <nav>
   <a href="/">Home</a>
-  <a href="/NewsAndSales/">News & Sales</a>
-  <a href="/FindMeAtTheseEvents/">Live Events</a>
-  <a href="/EmailListSignup/">Email List</a>
+  <a href="../NewsAndSales/">News & Sales</a>
+  <a href="../FindMeAtTheseEvents/">Live Events</a>
+  <a href="../EmailListSignup/">Email List</a>
+  <a href="../Wholesale/" class="active">Wholesale</a>
 </nav>
 
 <div class="container">
 
-  <!-- INTRODUCTION -->
   <div class="card">
+
     <h2>Wholesale</h2>
 
     <p>
-      [ADD YOUR WHOLESALE INTRODUCTION HERE]
+      Interested in carrying The Tired Hippy Co products?
+      Fill out the form below and we'll get back to you with
+      availability, pricing, and ordering information.
     </p>
 
-    <p>
-      [ADD ANY ADDITIONAL INFORMATION ABOUT YOUR WHOLESALE PROGRAM HERE]
-    </p>
   </div>
 
-  <!-- PRODUCTS -->
+
   <div class="card">
-    <h2>Wholesale Products</h2>
 
-    <p>
-      [LIST OR DESCRIBE THE PRODUCTS YOU OFFER WHOLESALE HERE]
-    </p>
+    <h2>Your Information</h2>
 
-    <p>
-      [ADD PRODUCT-SPECIFIC INFORMATION HERE]
-    </p>
-  </div>
+    <form id="wholesale-form"
+          action="PASTE_YOUR_WHOLESALE_GOOGLE_SCRIPT_URL_HERE"
+          method="POST">
 
-  <!-- ORDER QUANTITIES -->
-  <div class="card">
-    <h2>Order Quantities</h2>
+      <label for="business">Business / Shop Name</label>
+      <br>
+      <input
+        type="text"
+        id="business"
+        name="business"
+        placeholder="Business or shop name"
+        required
+      >
+      <br><br>
 
-    <p>
-      [ADD YOUR MINIMUM AND MAXIMUM WHOLESALE ORDER QUANTITIES HERE]
-    </p>
-  </div>
 
-  <!-- PRICING -->
-  <div class="card">
-    <h2>Wholesale Pricing</h2>
+      <label for="contact">Contact Name</label>
+      <br>
+      <input
+        type="text"
+        id="contact"
+        name="contact"
+        placeholder="Your name"
+        required
+      >
+      <br><br>
 
-    <p>
-      [ADD YOUR WHOLESALE PRICING INFORMATION HERE]
-    </p>
 
-    <p>
-      [ADD ANY INFORMATION ABOUT QUANTITY-BASED PRICING OR FUTURE PRICING HERE]
-    </p>
-  </div>
+      <label for="email">Email</label>
+      <br>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email address"
+        required
+      >
+      <br><br>
 
-  <!-- PRODUCTION -->
-  <div class="card">
-    <h2>Production & Lead Time</h2>
 
-    <p>
-      [ADD YOUR TYPICAL PRODUCTION TIME HERE]
-    </p>
+      <label for="website">Website / Social Media</label>
+      <br>
+      <input
+        type="text"
+        id="website"
+        name="website"
+        placeholder="Website, Instagram, Facebook, etc."
+      >
+      <br><br>
 
-    <p>
-      [ADD INFORMATION ABOUT SPECIALTY WOODS, CUSTOM ORDERS, OR OTHER PRODUCTION CONSIDERATIONS HERE]
-    </p>
-  </div>
 
-  <!-- SHIPPING -->
-  <div class="card">
-    <h2>Shipping</h2>
+      <label for="interested">What are you interested in?</label>
+      <br>
+      <textarea
+        id="interested"
+        name="interested"
+        rows="4"
+        placeholder="Products, styles, materials, etc."
+        required
+      ></textarea>
+      <br><br>
 
-    <p>
-      [ADD YOUR WHOLESALE SHIPPING INFORMATION HERE]
-    </p>
-  </div>
 
-  <!-- CUSTOM ORDERS -->
-  <div class="card">
-    <h2>Custom Wholesale Orders</h2>
+      <label for="quantity">How many are you interested in?</label>
+      <br>
+      <input
+        type="text"
+        id="quantity"
+        name="quantity"
+        placeholder="Estimated quantity"
+        required
+      >
+      <br><br>
 
-    <p>
-      [ADD INFORMATION ABOUT CUSTOM WHOLESALE ORDERS HERE]
-    </p>
-  </div>
 
-  <!-- CONTACT -->
-  <div class="card">
-    <h2>Interested in Wholesale?</h2>
+      <label for="message">Anything else we should know?</label>
+      <br>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Additional information, questions, or requests"
+      ></textarea>
+      <br><br>
 
-    <p>
-      [ADD YOUR WHOLESALE INQUIRY INSTRUCTIONS HERE]
-    </p>
 
-    <p>
-      [ADD CONTACT INFORMATION OR A LINK/BUTTON HERE]
-    </p>
+      <button class="signup-button" type="submit">
+        Send Wholesale Inquiry
+      </button>
+
+    </form>
+
+    <p id="status" style="display:none; font-weight:bold;"></p>
+
   </div>
 
 </div>
 
+
+<script>
+  const form = document.getElementById("wholesale-form");
+  const status = document.getElementById("status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    status.style.display = "block";
+    status.style.color = "black";
+    status.textContent = "Submitting...";
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData
+      });
+
+      if (res.ok) {
+        status.style.color = "green";
+        status.textContent = "Thanks! We'll be in touch.";
+        form.reset();
+      } else {
+        status.style.color = "red";
+        status.textContent = "Something went wrong. Try again.";
+      }
+
+    } catch (err) {
+      status.style.color = "red";
+      status.textContent = "Network error. Try again.";
+    }
+  });
+</script>
+
+
 <footer class="footer">
+
   <div class="footer-left">
     <p>The Tired Hippy Co™</p>
     <p>All artwork and logos protected © 2025–2026</p>
   </div>
 
   <div class="footer-right">
+
     <a href="mailto:business@thetiredhippy.com?subject=Business%20Inquiry%20-%20The%20Tired%20Hippy%20Co">
       Contact (Email)
     </a>
@@ -138,7 +199,9 @@
     <a href="/Privacypolicy/">
       Privacy Policy
     </a>
+
   </div>
+
 </footer>
 
 </body>
