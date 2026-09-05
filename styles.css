@@ -16,6 +16,10 @@ body {
   font-family: 'Aladin', Arial, cursive;
   background: var(--dark);
   color: white;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER LAYOUT */
@@ -73,6 +77,7 @@ nav a.active {
   max-width: 900px;
   margin: 60px auto 0 auto;
   padding: 20px;
+  flex: 1;
 }
 
 /* CONTENT BOXES */
@@ -87,6 +92,7 @@ nav a.active {
 .card h2 {
   color: var(--teal);
 }
+
 /* FORMS */
 input,
 button {
@@ -222,7 +228,7 @@ label {
   padding: 0 !important;
   margin: -1px !important;
   overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap !important;
   border: 0 !important;
 }
@@ -272,6 +278,7 @@ label {
     justify-content: center;
   }
 }
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
