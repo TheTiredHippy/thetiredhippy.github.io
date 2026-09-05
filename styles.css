@@ -74,10 +74,12 @@ nav a.active {
 
 /* PAGE CONTENT */
 .container {
+  width: 100%;
   max-width: 900px;
   margin: 60px auto 0 auto;
   padding: 20px;
   flex: 1;
+  box-sizing: border-box;
 }
 
 /* CONTENT BOXES */
