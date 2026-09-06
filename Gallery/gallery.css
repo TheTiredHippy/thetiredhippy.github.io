@@ -242,15 +242,22 @@
 }
 .about-section {
   max-width: 900px;
-  margin: 0 auto 40px;
-  padding: 24px 28px;
-  background: var(--cream);
-  border-radius: 10px;
+  margin: 0 auto 45px;
+  padding: 25px 30px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
 
-.about-section > p {
+.about-section h2 {
   margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.about-section > p {
+  margin-bottom: 0;
 }
 
 .about-section details {
@@ -258,12 +265,9 @@
 }
 
 .about-section summary {
-  display: inline-block;
+  display: inline;
   cursor: pointer;
-  background: var(--brown);
-  color: white;
-  padding: 9px 14px;
-  border-radius: 8px;
+  color: var(--teal);
   font-weight: bold;
   list-style: none;
 }
@@ -273,8 +277,7 @@
 }
 
 .about-section summary:hover {
-  background: var(--teal);
-  color: var(--dark);
+  text-decoration: underline;
 }
 
 .about-content {
