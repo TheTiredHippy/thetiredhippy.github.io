@@ -242,18 +242,15 @@
 }
 .about-section {
   max-width: 900px;
-  margin: 0 auto 45px;
-  padding: 25px 30px;
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
+  margin: 0 auto 40px;
+  padding: 0 10px 25px;
+  border-bottom: 2px solid var(--brown);
 }
 
 .about-section h2 {
   margin-top: 0;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .about-section > p {
@@ -261,11 +258,10 @@
 }
 
 .about-section details {
-  margin-top: 18px;
+  margin-top: 15px;
 }
 
 .about-section summary {
-  display: inline;
   cursor: pointer;
   color: var(--teal);
   font-weight: bold;
