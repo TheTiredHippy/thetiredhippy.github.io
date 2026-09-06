@@ -307,3 +307,8 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+.footer-right a.active {
+  background: var(--teal);
+  color: var(--dark);
+  font-weight: bold;
+}
