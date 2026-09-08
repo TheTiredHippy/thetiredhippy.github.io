@@ -79,11 +79,8 @@ document.getElementById("lightbox-title");
 const lightboxDescription =
 document.getElementById("lightbox-description");
 
-const lightboxMaterials =
-document.getElementById("lightbox-materials");
-
-const etsyLink =
-document.getElementById("etsy-link");
+const statusButton =
+document.getElementById("status-button");
 
 const closeButton =
 document.querySelector(".close");
@@ -96,41 +93,81 @@ document.querySelectorAll(".gallery-item").forEach(item => {
   item.addEventListener("click", () => {
 
 
+    // IMAGE
+
     lightboxImage.src =
-      item.dataset.full;
+      item.dataset.fullResLocation;
 
 
     lightboxImage.alt =
       item.querySelector("img").alt;
 
 
-    lightboxTitle.textContent =
-      item.dataset.title;
+    // TITLE
 
+    lightboxTitle.textContent =
+      item.dataset.itemTitle;
+
+
+    // DESCRIPTION
 
     lightboxDescription.textContent =
-      item.dataset.description;
+      item.dataset.itemDescription;
 
 
-    lightboxMaterials.textContent =
-      item.dataset.materials;
+    // BUTTON
+
+    const buttonType =
+      item.dataset.buttonType;
+
+    const buttonLocation =
+      item.dataset.buttonLocation;
 
 
-    if (item.dataset.etsy) {
+    if (buttonType === "etsy") {
 
-      etsyLink.href =
-        item.dataset.etsy;
-
-      etsyLink.style.display =
-        "inline-block";
-
-    } else {
-
-      etsyLink.style.display =
-        "none";
+      statusButton.textContent = "Buy on Etsy";
+      statusButton.href = buttonLocation;
+      statusButton.style.display = "inline-block";
 
     }
 
+
+    else if (buttonType === "contact") {
+
+      statusButton.textContent = "Contact Me";
+      statusButton.href = buttonLocation;
+      statusButton.style.display = "inline-block";
+
+    }
+
+
+    else if (buttonType === "sold") {
+
+      statusButton.textContent = "Sold";
+      statusButton.removeAttribute("href");
+      statusButton.style.display = "inline-block";
+
+    }
+
+
+    else if (buttonType === "not-for-sale") {
+
+      statusButton.textContent = "Not For Sale";
+      statusButton.removeAttribute("href");
+      statusButton.style.display = "inline-block";
+
+    }
+
+
+    else {
+
+      statusButton.style.display = "none";
+
+    }
+
+
+    // OPEN LIGHTBOX
 
     lightbox.style.display =
       "flex";
@@ -143,7 +180,9 @@ document.querySelectorAll(".gallery-item").forEach(item => {
 
 
 
+// ==========================
 // CLOSE BUTTON
+// ==========================
 
 closeButton.addEventListener("click", () => {
 
@@ -153,7 +192,9 @@ closeButton.addEventListener("click", () => {
 
 
 
+// ==========================
 // CLICK OUTSIDE TO CLOSE
+// ==========================
 
 lightbox.addEventListener("click", (event) => {
 
@@ -167,7 +208,9 @@ lightbox.addEventListener("click", (event) => {
 
 
 
+// ==========================
 // ESC KEY TO CLOSE
+// ==========================
 
 document.addEventListener("keydown", (event) => {
 
