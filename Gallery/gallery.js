@@ -1,6 +1,6 @@
 // GALLERY SETTINGS
 
-const INITIAL_IMAGES = 12;
+const INITIAL_IMAGES = 8;
 
 
 // ==========================
