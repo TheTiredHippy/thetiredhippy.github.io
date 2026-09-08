@@ -183,33 +183,21 @@
 }
 
 
-/* ETSY BUTTON */
+/* STATUS BUTTON */
 
-.etsy-button {
-
+.status-button {
   display: inline-block;
-
   background: var(--brown);
-
   color: white;
-
   padding: 12px 20px;
-
   border-radius: 8px;
-
   text-decoration: none;
-
   margin-top: 15px;
-
 }
 
-
-.etsy-button:hover {
-
+.status-button:hover {
   background: var(--teal);
-
   color: var(--dark);
-
 }
 
 
