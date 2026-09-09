@@ -271,3 +271,47 @@
 .about-content p:last-child {
   margin-bottom: 0;
 }
+/* LIGHTBOX IMAGE NAVIGATION */
+
+.lightbox-image-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+
+  border: none;
+  border-radius: 50%;
+
+  width: 50px;
+  height: 50px;
+
+  font-size: 30px;
+
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+
+.lightbox-arrow-left {
+  left: 10px;
+}
+
+
+.lightbox-arrow-right {
+  right: 10px;
+}
+
+
+.lightbox-arrow:hover {
+  background: var(--brown);
+}
