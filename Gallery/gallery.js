@@ -37,7 +37,8 @@ document.querySelectorAll(".gallery-category").forEach(category => {
 
       if (index >= INITIAL_IMAGES) {
 
-        item.style.display = expanded ? "none" : "block";
+        item.style.display =
+          expanded ? "none" : "block";
 
       }
 
@@ -68,37 +69,87 @@ document.querySelectorAll(".gallery-category").forEach(category => {
 // LIGHTBOX
 // ==========================
 
-
-const lightbox = document.getElementById("lightbox");
+const lightbox =
+  document.getElementById("lightbox");
 
 const lightboxImage =
-document.getElementById("lightbox-image");
+  document.getElementById("lightbox-image");
 
 const lightboxTitle =
-document.getElementById("lightbox-title");
+  document.getElementById("lightbox-title");
 
 const lightboxDescription =
-document.getElementById("lightbox-description");
+  document.getElementById("lightbox-description");
 
 const statusButton =
-document.getElementById("status-button");
+  document.getElementById("status-button");
+
+const previousImage =
+  document.getElementById("previous-image");
+
+const nextImage =
+  document.getElementById("next-image");
 
 const closeButton =
-document.querySelector(".close");
+  document.querySelector(".close");
 
 
+// Current item's images
+
+let currentImages = [];
+
+let currentImageIndex = 0;
+
+
+// ==========================
+// SHOW LIGHTBOX IMAGE
+// ==========================
+
+function showLightboxImage() {
+
+  lightboxImage.src =
+    currentImages[currentImageIndex];
+
+}
+
+
+// ==========================
+// GALLERY ITEM CLICK
+// ==========================
 
 document.querySelectorAll(".gallery-item").forEach(item => {
 
-
   item.addEventListener("click", () => {
 
+    // MAIN IMAGE
 
-    // IMAGE
-
-    lightboxImage.src =
+    const mainImage =
       item.dataset.fullResLocation;
 
+
+    // ADDITIONAL IMAGES
+
+    const additionalImages =
+      item.dataset.additionalImages
+        ? item.dataset.additionalImages
+            .split(",")
+            .map(image => image.trim())
+            .filter(image => image !== "")
+        : [];
+
+
+    // CREATE IMAGE LIST
+
+    currentImages = [
+      mainImage,
+      ...additionalImages
+    ];
+
+
+    currentImageIndex = 0;
+
+
+    // IMAGE ALT TEXT
 
     lightboxImage.alt =
       item.querySelector("img").alt;
@@ -116,6 +167,32 @@ document.querySelectorAll(".gallery-item").forEach(item => {
       item.dataset.itemDescription;
 
 
+    // SHOW FIRST IMAGE
+
+    showLightboxImage();
+
+
+    // SHOW / HIDE ARROWS
+
+    if (currentImages.length > 1) {
+
+      previousImage.style.display =
+        "block";
+
+      nextImage.style.display =
+        "block";
+
+    } else {
+
+      previousImage.style.display =
+        "none";
+
+      nextImage.style.display =
+        "none";
+
+    }
+
+
     // BUTTON
 
     const buttonType =
@@ -127,43 +204,62 @@ document.querySelectorAll(".gallery-item").forEach(item => {
 
     if (buttonType === "etsy") {
 
-      statusButton.textContent = "Buy on Etsy";
-      statusButton.href = buttonLocation;
-      statusButton.style.display = "inline-block";
+      statusButton.textContent =
+        "Buy on Etsy";
+
+      statusButton.href =
+        buttonLocation;
+
+      statusButton.style.display =
+        "inline-block";
 
     }
 
 
     else if (buttonType === "contact") {
 
-      statusButton.textContent = "Contact Me";
-      statusButton.href = buttonLocation;
-      statusButton.style.display = "inline-block";
+      statusButton.textContent =
+        "Contact Me";
+
+      statusButton.href =
+        buttonLocation;
+
+      statusButton.style.display =
+        "inline-block";
 
     }
 
 
     else if (buttonType === "sold") {
 
-      statusButton.textContent = "Sold";
+      statusButton.textContent =
+        "Sold";
+
       statusButton.removeAttribute("href");
-      statusButton.style.display = "inline-block";
+
+      statusButton.style.display =
+        "inline-block";
 
     }
 
 
     else if (buttonType === "not-for-sale") {
 
-      statusButton.textContent = "Not For Sale";
+      statusButton.textContent =
+        "Not For Sale";
+
       statusButton.removeAttribute("href");
-      statusButton.style.display = "inline-block";
+
+      statusButton.style.display =
+        "inline-block";
 
     }
 
 
     else {
 
-      statusButton.style.display = "none";
+      statusButton.style.display =
+        "none";
 
     }
 
@@ -173,9 +269,48 @@ document.querySelectorAll(".gallery-item").forEach(item => {
     lightbox.style.display =
       "flex";
 
-
   });
 
+});
+
+
+
+// ==========================
+// PREVIOUS IMAGE
+// ==========================
+
+previousImage.addEventListener("click", (event) => {
+
+  event.stopPropagation();
+
+  currentImageIndex--;
+
+  if (currentImageIndex < 0) {
+    currentImageIndex =
+      currentImages.length - 1;
+  }
+
+  showLightboxImage();
+
+});
+
+
+
+// ==========================
+// NEXT IMAGE
+// ==========================
+
+nextImage.addEventListener("click", (event) => {
+
+  event.stopPropagation();
+
+  currentImageIndex++;
+
+  if (currentImageIndex >= currentImages.length) {
+    currentImageIndex = 0;
+  }
+
+  showLightboxImage();
 
 });
 
@@ -187,7 +322,8 @@ document.querySelectorAll(".gallery-item").forEach(item => {
 
 closeButton.addEventListener("click", () => {
 
-  lightbox.style.display = "none";
+  lightbox.style.display =
+    "none";
 
 });
 
@@ -201,7 +337,8 @@ lightbox.addEventListener("click", (event) => {
 
   if (event.target === lightbox) {
 
-    lightbox.style.display = "none";
+    lightbox.style.display =
+      "none";
 
   }
 
@@ -217,7 +354,8 @@ document.addEventListener("keydown", (event) => {
 
   if (event.key === "Escape") {
 
-    lightbox.style.display = "none";
+    lightbox.style.display =
+      "none";
 
   }
 
