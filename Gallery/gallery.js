@@ -1,6 +1,7 @@
 // GALLERY SETTINGS
 
-const INITIAL_IMAGES = 8;
+const INITIAL_IMAGES =
+  window.innerWidth <= 768 ? 4 : 8;
 
 
 // ==========================
