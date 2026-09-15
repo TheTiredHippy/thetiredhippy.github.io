@@ -316,3 +316,9 @@
 .lightbox-arrow:hover {
   background: var(--brown);
 }
+
+.category-description {
+  font-size: 0.6em;
+  color: white;
+  font-weight: normal;
+}
