@@ -312,8 +312,3 @@ textarea {
   color: var(--dark);
   font-weight: bold;
 }
-
-.about-section {
-  width: 100%;
-  box-sizing: border-box;
-}
