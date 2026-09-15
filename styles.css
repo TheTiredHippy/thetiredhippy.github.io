@@ -75,9 +75,9 @@ nav a.active {
 /* PAGE CONTENT */
 .container {
   width: 100%;
-  max-width: 1080px;
-  margin: 72px auto 0 auto;
-  padding: 24px;
+  max-width: 1200px;
+  margin: 80px auto 0 auto;
+  padding: 27px;
   flex: 1;
   box-sizing: border-box;
 }
