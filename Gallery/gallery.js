@@ -48,16 +48,16 @@ document.querySelectorAll(".gallery-category").forEach(category => {
     button.dataset.expanded = !expanded;
 
 
-    if (expanded) {
+if (expanded) {
 
-      button.textContent =
-        "See All " + category.querySelector("h2").textContent;
+  button.textContent =
+    "See All " + category.querySelector(".category-name").textContent;
 
-    } else {
+} else {
 
-      button.textContent = "Show Less";
+  button.textContent = "Show Less";
 
-    }
+}
 
   });
 
