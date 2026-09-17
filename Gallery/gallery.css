@@ -40,7 +40,6 @@
 /* IMAGE CARDS */
 
 .gallery-item {
-  position: relative;
   background: rgba(255,255,255,0.05);
   border-left: 4px solid var(--brown);
   border-radius: 10px;
@@ -346,4 +345,8 @@
 
 .availability-dot.unavailable {
   background: red;
+}
+
+.gallery-image-container {
+  position: relative;
 }
