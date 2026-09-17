@@ -149,7 +149,10 @@ document.querySelectorAll(".gallery-item").forEach(item => {
 
   }
 
-  item.appendChild(availabilityDot);
+  const imageContainer =
+  item.querySelector(".gallery-image-container");
+
+imageContainer.appendChild(availabilityDot);
   
   item.addEventListener("click", () => {
 
