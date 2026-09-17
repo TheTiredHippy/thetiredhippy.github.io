@@ -350,3 +350,7 @@
 .gallery-image-container {
   position: relative;
 }
+
+.availability-dot.email {
+  background: yellow;
+}
