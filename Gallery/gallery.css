@@ -322,3 +322,27 @@
   color: white;
   font-weight: normal;
 }
+
+/* AVAILABILITY DOT */
+
+.availability-dot {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+  border: 2px solid white;
+
+  z-index: 2;
+}
+
+.availability-dot.available {
+  background: green;
+}
+
+.availability-dot.unavailable {
+  background: red;
+}
