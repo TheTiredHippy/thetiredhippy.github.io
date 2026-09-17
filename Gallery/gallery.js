@@ -119,6 +119,38 @@ function showLightboxImage() {
 
 document.querySelectorAll(".gallery-item").forEach(item => {
 
+  // AVAILABILITY DOT
+
+  const availabilityDot =
+    document.createElement("span");
+
+  const buttonType =
+    item.dataset.buttonType;
+
+  if (
+    buttonType === "etsy" ||
+    buttonType === "contact"
+  ) {
+
+    availabilityDot.classList.add(
+      "availability-dot",
+      "available"
+    );
+
+  } else if (
+    buttonType === "sold" ||
+    buttonType === "not-for-sale"
+  ) {
+
+    availabilityDot.classList.add(
+      "availability-dot",
+      "unavailable"
+    );
+
+  }
+
+  item.appendChild(availabilityDot);
+  
   item.addEventListener("click", () => {
 
     // MAIN IMAGE
