@@ -354,3 +354,45 @@
 .availability-dot.contact {
   background: yellow;
 }
+
+/* GALLERY KEY */
+
+.gallery-key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  margin-top: -30px;
+  margin-bottom: 40px;
+
+  font-size: 18px;
+}
+
+.gallery-key span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.key-dot {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+  border: 1px solid white;
+
+  display: inline-block;
+}
+
+.key-dot.available {
+  background: green;
+}
+
+.key-dot.unavailable {
+  background: red;
+}
+
+.key-dot.contact {
+  background: yellow;
+}
