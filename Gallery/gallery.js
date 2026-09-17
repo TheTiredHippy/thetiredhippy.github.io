@@ -262,8 +262,8 @@ imageContainer.appendChild(availabilityDot);
     else if (buttonType === "contact") {
 
       statusButton.textContent =
-        "Contact Me";
-
+        "Email Me";
+      
       statusButton.href =
         buttonLocation;
 
