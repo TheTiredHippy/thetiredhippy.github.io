@@ -128,35 +128,34 @@ document.querySelectorAll(".gallery-item").forEach(item => {
     item.dataset.buttonType;
 
   if (
-  buttonType === "etsy" ||
-  buttonType === "contact"
-) {
+    buttonType === "etsy"
+  ) {
 
-  availabilityDot.classList.add(
-    "availability-dot",
-    "available"
-  );
+    availabilityDot.classList.add(
+      "availability-dot",
+      "available"
+    );
 
-} else if (
-  buttonType === "email"
-) {
+  } else if (
+    buttonType === "contact"
+  ) {
 
-  availabilityDot.classList.add(
-    "availability-dot",
-    "email"
-  );
+    availabilityDot.classList.add(
+      "availability-dot",
+      "contact"
+    );
 
-} else if (
-  buttonType === "sold" ||
-  buttonType === "not-for-sale"
-) {
+  } else if (
+    buttonType === "sold" ||
+    buttonType === "not-for-sale"
+  ) {
 
-  availabilityDot.classList.add(
-    "availability-dot",
-    "unavailable"
-  );
+    availabilityDot.classList.add(
+      "availability-dot",
+      "unavailable"
+    );
 
-}
+  }
 
   const imageContainer =
   item.querySelector(".gallery-image-container");
