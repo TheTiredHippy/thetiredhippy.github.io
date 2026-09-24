@@ -10,6 +10,11 @@
 .gallery-title {
   text-align: center;
   color: var(--teal);
+      text-shadow:
+        -1px -1px 0 #fff,
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
   margin-bottom: 50px;
 }
 
