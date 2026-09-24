@@ -8,6 +8,7 @@ html {
 :root {
   --teal: #00b2b2;
   --brown: #ba6a34;
+  --button-brown: #9a5528;
   --bluegray: #5c7c89;
   --dark: #003333;
 }
@@ -56,7 +57,7 @@ nav {
 }
 
 nav a {
-  background: var(--brown);
+  background: var(--button-brown);
   color: white;
   padding: 10px 15px;
   border-radius: 8px;
