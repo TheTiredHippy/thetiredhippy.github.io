@@ -74,7 +74,7 @@
   display: block;
   margin: 25px auto 0 auto;
 
-  background: var(--brown);
+  background: var(--button-brown);
   color: white;
 
   border: none;
