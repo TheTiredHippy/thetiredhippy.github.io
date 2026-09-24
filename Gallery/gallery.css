@@ -11,10 +11,10 @@
   text-align: center;
   color: var(--teal);
 text-shadow:
-    -1px -2px 0 #8FA7AD,
-     1px -2px 0 #8FA7AD,
-    -1px  2px 0 #8FA7AD,
-     1px  2px 0 #8FA7AD;
+    -1px -2px 0 #789399,
+     1px -2px 0 #789399,
+    -1px  2px 0 #789399,
+     1px  2px 0 #789399;
   margin-bottom: 50px;
 }
 
