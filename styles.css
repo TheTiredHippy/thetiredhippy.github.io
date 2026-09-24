@@ -213,7 +213,7 @@ label {
 }
 
 .footer-right a {
-  background: var(--brown);
+  background: var(--button-brown);
   color: white;
   padding: 10px 14px;
   border-radius: 8px;
