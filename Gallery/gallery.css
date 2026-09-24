@@ -187,7 +187,7 @@
 
 .status-button {
   display: inline-block;
-  background: var(--brown);
+  background: var(--button-brown);
   color: white;
   padding: 12px 20px;
   border-radius: 8px;
