@@ -106,7 +106,7 @@ nav a.active {
 
 /* FORMS */
 input,
-button, {
+button {
   font-size: 22px;
   padding: 14px;
   margin-top: 10px;
