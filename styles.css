@@ -106,11 +106,19 @@ nav a.active {
 
 /* FORMS */
 input,
-button,
-textarea {
+button, {
   font-size: 22px;
   padding: 14px;
   margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 22px;
+  padding: 14px;
+  font-family: Arial, sans-serif;
+  resize: vertical;
 }
 
 .signup-button {
