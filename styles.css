@@ -302,15 +302,6 @@ label {
   box-sizing: border-box;
 }
 
-textarea {
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 22px;
-  padding: 14px;
-  font-family: inherit;
-  resize: vertical;
-}
-
 @media (max-width: 600px) {
   .form-grid {
     grid-template-columns: 1fr;
