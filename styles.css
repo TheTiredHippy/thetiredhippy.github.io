@@ -4,6 +4,9 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  ascent-override: 90.5%;
+  descent-override: 32.1%;
+  line-gap-override: 0%;
 }
 
 html {
