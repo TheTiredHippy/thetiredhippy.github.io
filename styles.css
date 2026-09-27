@@ -150,6 +150,7 @@ input[type="checkbox"] {
 }
 
 label {
+  display: block;
   font-size: 26px;
 }
 
