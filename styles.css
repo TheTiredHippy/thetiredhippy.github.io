@@ -51,9 +51,8 @@ header {
 
 /* CENTER BANNER */
 .banner {
-  width: 800px;
-  height: 160px;
-  max-width: 100%;
+  max-height: 160px;
+  width: auto;
 }
 
 /* NAVIGATION */
